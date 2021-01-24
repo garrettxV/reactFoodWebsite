@@ -10,7 +10,7 @@ const SideMenu = () => {
 				<li><a href="/">ABOUT</a></li>
 			</ul>
 		</nav>
-	)
-}
+	);
+};
 
 export default SideMenu
