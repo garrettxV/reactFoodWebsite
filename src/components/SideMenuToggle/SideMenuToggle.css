@@ -1,0 +1,20 @@
+.menu-toggle {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 22px;
+	width: 32px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.menu-toggle:focus {
+	outline: none;
+}
+
+.menu-toggle__line {
+	width: 30px;
+	height: 2px;
+	background: white;
+}

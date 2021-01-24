@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Header from './components/Header/Header'
+import SideMenu from './components/SideMenu/SideMenu'
+import Backdrop from './components/Backdrop/Backdrop'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends Component {
+
+	state = {
+		sideMenuOpen: false
+	};
+
+	sideMenuClickHandler = () => {
+		this.setState((prevState) => {
+			return {sideMenuOpen: !prevState.sideMenuOpen}
+		});
+	};
+
+	backdropClickHandler = () => {
+		this.setState({sideMenuOpen: false})
+	};
+
+render() {
+ 	let sideMenu;
+	let backdrop;
+
+	if (this.state.sideMenuOpen) {
+		sideMenu = <SideMenu/>
+		backdrop = <Backdrop backDropHandler = {this.backdropClickHandler}/>
+	}
+
+	  return (
+    <div style={{height: '100%'}}className="App">
+      <Header menuClickHandler={this.sideMenuClickHandler} />
+			{sideMenu}
+			{backdrop}
     </div>
-  );
+	 );
+	}
 }
 
 export default App;

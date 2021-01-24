@@ -1,0 +1,39 @@
+.contact__card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	width: 567.98px;
+	height: 428.42px;
+	border-radius: 4px;
+	padding: 2.5rem;
+	background-color: #cfb095c7;
+}
+
+.contact__card h2 {
+	padding-bottom: 14px;
+	font-size: 2rem;
+	color: #fff;
+}
+
+.contact-card__greeting {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.contact-card__form {
+	width: 100%;
+}
+
+.contact-card_input {
+	width: 100%;
+	font-size: 1rem;
+	border: solid rgba(167, 164, 164, 0.25) 1px !important;
+	margin-bottom: 1rem;
+	line-height: 1.4;
+	border-radius: 4px;
+	padding: 14px 16px;
+	font-weight: 300;
+	color: #8c8c8c;
+}
