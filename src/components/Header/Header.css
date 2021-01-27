@@ -38,11 +38,15 @@
 	padding: 0 1rem;
 }
 
+.header__header {
+	display: flex;
+}
+
 .header__icon {
 	display: flex;
 	color: white;
 	font-size: 2rem;
-	padding: 0 1rem;
+	padding: 0.4rem 1rem;
 }
 
 .header__logo a {
@@ -75,4 +79,22 @@
 .header_navigation-items ul a:active {
 	color: rgba(255, 255, 255, 0.57);
 	border-bottom: 2px solid rgba(255, 255, 255, 0.57);
+}
+
+@media (max-width: 500px) {
+	.header__logo a,
+	.header__icon {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.header_navigation-items ul {
+		display: none;
+	}
+
+	.header__header {
+		width: 100%;
+		justify-content: center;
+	}
 }

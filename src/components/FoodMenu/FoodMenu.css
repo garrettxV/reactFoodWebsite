@@ -1,0 +1,57 @@
+.food__menu-container {
+	height: 80%;
+	width: 90%;
+	background: white;
+	margin-top: 5rem;
+	padding-bottom: 3rem;
+	border-radius: 6px;
+	position: absolute;
+	z-index: 200;
+	cursor: pointer;
+}
+
+.food__menu-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: fixed;
+	top: 0;
+	left: 0;
+	background-color: #e47a2e;
+	height: 5rem;
+}
+
+.food__menu-header h1 {
+	color: white;
+}
+
+.grid__container {
+	height: 80%;
+	margin: 2rem 2rem;
+	border: solid black 2px;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.grid {
+	display: grid;
+	grid-gap: 1rem;
+	padding: 3rem 3rem;
+
+	grid-template-columns: repeat(auto-fit, minmax(180.75px, 1fr));
+	/* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+	grid-template-rows: repeat(auto, minmax(180.75px, auto));
+}
+
+.item {
+	padding: 1.5rem;
+	background: white;
+	border: #ccc 1px solid;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+
+/* .item__1 {
+	background: url("../FoodMenu/Images/tomato-basil.png") no-repeat center center fixed;
+} */
