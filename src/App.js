@@ -1,39 +1,38 @@
 import React, { useState } from 'react';
-import Header from './components/Header/Header'
-import SideMenu from './components/SideMenu/SideMenu'
-import Backdrop from './components/Backdrop/Backdrop'
-
+import Header from './components/Header/Header';
+import SideMenu from './components/SideMenu/SideMenu';
+import Backdrop from './components/Backdrop/Backdrop';
+// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import Menu from './components/Menu/Menu'
 
 const App = () => {
-
-	const [{ sideMenuOpen }, setIt] = useState({sideMenuOpen: false});
+	const [ { sideMenuOpen }, setState ] = useState({ sideMenuOpen: false });
 
 	const sideMenuClickHandler = () => {
-		setIt((prevState) => {
-			return {sideMenuOpen: !prevState.sideMenuOpen}
+		setState((prevState) => {
+			return { sideMenuOpen: !prevState.sideMenuOpen };
 		});
 	};
 
 	const backdropClickHandler = () => {
-		setIt({sideMenuOpen: false})
+		setState({ sideMenuOpen: false });
 	};
 
- 	let sideMenu;
+	let sideMenu;
 	let backdrop;
 
 	if (sideMenuOpen) {
-		sideMenu = <SideMenu/>
-		backdrop = <Backdrop backDropHandler = {backdropClickHandler}/>
+		sideMenu = <SideMenu backDropHandler={backdropClickHandler} />;
+		backdrop = <Backdrop backDropHandler={backdropClickHandler} />;
 	}
 
-	  return (
-    <div style={{height: '100%'}}className="App">
-      <Header menuClickHandler={sideMenuClickHandler} foodMenuClickHandler={backdropClickHandler}/>
+	return (
+		<div style={{ height: '100%' }} className="App">
+			<Header menuClickHandler={sideMenuClickHandler} foodMenuClickHandler={backdropClickHandler} />
 			{sideMenu}
 			{backdrop}
-    </div>
-	 );
-	}
+		</div>
+	);
+};
 
 export default App;

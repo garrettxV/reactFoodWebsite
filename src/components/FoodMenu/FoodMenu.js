@@ -13,6 +13,11 @@ const FoodMenu = (props) => {
 			id: 2,
 			food: 'sausage pizza',
 			ingredients: 'sauce, sausage, cheese'
+		},
+		{
+			id: 3,
+			food: 'banana split',
+			ingredients: 'ice cream, peanut butter'
 		}
 	]);
 
