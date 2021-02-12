@@ -41,8 +41,4 @@ const header = (props) => {
 	);
 };
 
-// Header.defaultProps = {
-// 	title: 'Pizza Delivery'
-// }
-
 export default header;

@@ -1,11 +1,6 @@
 import './SideMenu.css';
 
 const SideMenu = () => {
-	// const mediaQueryLists = {
-	// 	sm: '(min-width: 801px)',
-
-	// 	md: '(min-width: 1100px)'
-	// }
 
 	return (
 		<nav className="side-menu">

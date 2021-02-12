@@ -7,7 +7,8 @@ const FoodMenu = (props) => {
 		{
 			id: 1,
 			food: 'tomato basil pizza',
-			ingredients: 'sauce, cheese, tomato, basil'
+			ingredients: 'sauce, cheese, tomato, basil',
+			image: '/tomato-basil.png'
 		},
 		{
 			id: 2,
@@ -16,10 +17,11 @@ const FoodMenu = (props) => {
 		},
 		{
 			id: 3,
-			food: 'banana split',
-			ingredients: 'ice cream, peanut butter'
+			food: 'cheese pizza',
+			ingredients: 'cheese, sauce'
 		}
 	]);
+
 
 	// var tomatoBasil = require("../FoodMenu/Images/tomato-basil.png")
 
@@ -30,10 +32,6 @@ const FoodMenu = (props) => {
 			</div>
 			<div className="grid__container">
 				<div className="grid">
-					{/* <div className="item"></div>
-      		<div className="item">Item 2</div>
-      		<div className="item">Item 3</div>
-      		<div className="item">Item 4</div> */}
 					<Menu menu={menu} />
 				</div>
 			</div>
