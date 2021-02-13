@@ -1,5 +1,5 @@
 .item {
-	background: url("./Images/tomato-basil.png") no-repeat center center fixed;
 	font-size: 3rem;
 	color: black;
+	min-width: 100%;
 }

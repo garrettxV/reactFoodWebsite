@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Menu from '../Menu/Menu';
 import './FoodMenu.css';
+// import pizza from '../FoodMenu/images/tom-basil.png';
 
 const FoodMenu = (props) => {
 	const [ menu ] = useState([
@@ -8,12 +9,13 @@ const FoodMenu = (props) => {
 			id: 1,
 			food: 'tomato basil pizza',
 			ingredients: 'sauce, cheese, tomato, basil',
-			image: '/tomato-basil.png'
+			image:'/tom-basil.png'
 		},
 		{
 			id: 2,
-			food: 'sausage pizza',
-			ingredients: 'sauce, sausage, cheese'
+			food: 'combo pizza',
+			ingredients: 'sauce, sausage, cheese',
+			image:'/combo.jpg'
 		},
 		{
 			id: 3,

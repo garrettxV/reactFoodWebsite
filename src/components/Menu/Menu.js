@@ -16,7 +16,7 @@ const Menu = ({ menu }) => {
 	return (
 		<>
 			{menu.map((item) => (
-				<Item key={item.id} item={item} />
+				<Item key={item.id} item={item} ></Item>
 			))}
 		</>
 	)
