@@ -3,7 +3,7 @@ const Item = ({ item }) => {
 		<div>
 			<div className="item" />
 			<div className="item__header">
-				<img src={item.image} alt="food" />
+				<img src={item.image} alt="food" className="item__img" />
 			</div>
 			<div className="item__footer">
 				<p>{item.food}</p>
