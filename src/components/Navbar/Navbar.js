@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { IoCartOutline } from 'react-icons/io5';
 
 const Navbar = () => {
@@ -24,9 +24,11 @@ const Navbar = () => {
 						Sign In
 					</a>
 				</li>
-				<li className="cart">
-					<IoCartOutline />
-				</li>
+				<Link to="/SignUpLogin">
+					<li className="cart">
+						<IoCartOutline />
+					</li>
+				</Link>
 			</ul>
 		</div>
 	);

@@ -1,20 +1,38 @@
+.contact__card-backdrop::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(34, 34, 34, 0.5) no-repeat center center/cover;
+}
+
+.contact__card-container {
+	display: flex;
+	position: absolute;
+	top: 8rem;
+	left: 0;
+	width: 100%;
+	justify-content: center;
+}
+
 .contact__card {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	position: relative;
 	width: 567.98px;
 	height: 428.42px;
 	border-radius: 4px;
 	padding: 2.5rem;
-	background-color: #cfb095c7;
+	background-color: white;
 }
 
 .contact__card h2 {
 	padding-bottom: 14px;
 	font-size: 2rem;
-	color: #fff;
+	color: #000;
 }
 
 .contact-card__greeting {

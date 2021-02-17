@@ -22,7 +22,7 @@ const App = () => {
 	let backdrop;
 
 	if (sideMenuOpen) {
-		sideMenu = <SideMenu backDropHandler={backdropClickHandler} />;
+		sideMenu = <SideMenu/>;
 		backdrop = <Backdrop backDropHandler={backdropClickHandler} />;
 	}
 
