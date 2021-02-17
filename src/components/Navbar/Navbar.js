@@ -6,16 +6,16 @@ const Navbar = () => {
 		<div className="header_navigation-items">
 			<ul>
 				<Link to="/menu">
-					<li>MENU</li>
+					<li>Menu</li>
 				</Link>
 				<li>
-					<a href="/">PLACE ORDER</a>
+					<a href="/">Place Order</a>
 				</li>
 				<Link to="/locations">
-					<li>LOCATIONS</li>
+					<li>Locations</li>
 				</Link>
 				<li>
-					<a href="/">ABOUT</a>
+					<a href="/">About</a>
 				</li>
 			</ul>
 		</div>

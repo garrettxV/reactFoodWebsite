@@ -1,0 +1,25 @@
+.hero__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.hero__grid-text {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	max-width: 400px;
+	color: white;
+}
+
+.hero__grid-text h1 {
+	font-size: 3rem;
+	margin-bottom: 0.8rem;
+}
+
+.hero__grid-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}

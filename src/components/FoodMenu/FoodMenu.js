@@ -30,7 +30,7 @@ const FoodMenu = (props) => {
 	return (
 		<div className="food__menu-container" onClick={props.click__2}>
 			<div className="food__menu-header">
-				<h1>Our Menu</h1>
+				<span>Menu</span>
 			</div>
 			<div className="grid__container">
 				<div className="grid">

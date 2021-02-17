@@ -36,7 +36,7 @@
 	border-bottom: 2px solid rgba(255, 255, 255, 0.57);
 }
 
-@media (min-width: 801px) {
+@media (min-width: 1126px) {
 	.side-menu {
 		display: none;
 	}
