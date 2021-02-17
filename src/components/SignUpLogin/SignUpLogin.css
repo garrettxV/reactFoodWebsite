@@ -31,14 +31,24 @@
 
 .contact__card {
 	display: flex;
-	justify-content: center;
+	/* justify-content: center; */
 	align-items: center;
 	flex-direction: column;
 	width: 567.98px;
 	height: 428.42px;
 	border-radius: 4px;
-	padding: 2.5rem;
+	/* padding: 2.5rem; */
 	background-color: white;
+}
+
+.contact__card-close-container {
+	display: flex;
+	width: 100%;
+	padding-top: 5px;
+}
+
+.contact__spacer {
+	flex: 1;
 }
 
 .contact__card-close {
@@ -46,10 +56,8 @@
 	border: none;
 	font-size: 2rem;
 	transform: rotate(45deg);
-	position: absolute;
-	top: 0;
-	left: 64rem;
 	cursor: pointer;
+	padding-right: 8px;
 }
 
 .contact__card-close:focus {
@@ -57,7 +65,8 @@
 }
 
 .contact__card h2 {
-	padding-bottom: 14px;
+	padding: 4rem 0 14px 0;
+	padding-top: 4rem;
 	font-size: 2rem;
 	color: #000;
 }
