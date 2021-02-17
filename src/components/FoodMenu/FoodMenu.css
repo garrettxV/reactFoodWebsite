@@ -46,8 +46,8 @@
 	/* grid-template-rows: minmax(100px, 1fr); */
 }
 
-.item {
-}
+/* .item {
+} */
 
 .item__header {
 	display: flex;
@@ -58,6 +58,7 @@
 	width: 16.8rem;
 	background: #fff;
 	border: #ccc 1px solid;
+	border-radius: 8px 8px 0 0;
 }
 
 .item__footer {
@@ -69,6 +70,7 @@
 	width: 16.8rem;
 	background: #fff;
 	border: #ccc 1px solid;
+	border-radius: 0 0 8px 8px;
 }
 
 .item__img {

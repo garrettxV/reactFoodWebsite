@@ -2,17 +2,19 @@ import pizza from '/Users/Garrett/react-app/src/Images/Chef.svg';
 import './Hero.css';
 import { motion } from 'framer-motion';
 
-const Hero = (props) => {
+const Hero = () => {
 	return (
 		<div className="hero">
 			<div className="hero__grid">
 				<div className="hero__grid-text">
 					<motion.h1 initial={{ x: -600 }} animate={{ x: 5 }} transition={{ duration: 1.5 }}>
-						Fresh Handmade Pizza
+						Fresh Pizza Made To Order
 					</motion.h1>
 					<motion.p initial={{ x: -1000 }} animate={{ x: 5 }} transition={{ ease: 'easeOut', duration: 2.5 }}>
-						Our pizza is handmade with only the highest quality ingredients. It's always hot and fresh, and
-						satisfaction is guaranteed.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptas laboriosam accusantium
+						laborum doloremque, illo nobis veritatis eaque labore nihil fugiat odio dolorum temporibus dolor
+						obcaecati quam esse alias consequatur magnam consectetur eligendi nam vitae totam. Recusandae
+						optio nam deserunt.
 					</motion.p>
 				</div>
 				<motion.div
@@ -21,7 +23,7 @@ const Hero = (props) => {
 					animate={{ y: 5 }}
 					transition={{ duration: 1 }}
 				>
-					<img height={500} src={pizza} alt="pizza" />
+					<img height={400} src={pizza} alt="pizza" />
 				</motion.div>
 			</div>
 		</div>
