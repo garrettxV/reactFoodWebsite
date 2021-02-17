@@ -5,7 +5,6 @@ import Navbar from '../Navbar/Navbar';
 import FoodMenu from '../FoodMenu/FoodMenu';
 import Locations from '../Locations/Locations';
 import Hero from '../Hero/Hero';
-import SignUpLogin from '../SignUpLogin/SignUpLogin'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -33,7 +32,7 @@ const Header = (props) => {
 							</div>
 						</div>
 						<div className="spacer" />
-						<Navbar />
+						<Navbar click__3={props.signUpHandler} />
 					</nav>
 				</motion.header>
 				<Switch>
@@ -46,12 +45,9 @@ const Header = (props) => {
 					<Route exact path="/locations">
 						<Locations />
 					</Route>
-					<Route exact path="/SignUpLogin">
-						<Hero />
-						{/* <SignUpLogin /> */}
-					</Route>
 				</Switch>
 			</div>
+			{/* <SignUpLogin/> */}
 		</Router>
 	);
 };

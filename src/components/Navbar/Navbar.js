@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // import { motion } from 'framer-motion';
 import { IoCartOutline } from 'react-icons/io5';
 
-const Navbar = () => {
+const Navbar = (props) => {
 	return (
 		<div className="header_navigation-items">
 			<ul>
@@ -20,15 +20,13 @@ const Navbar = () => {
 					<a href="/">About</a>
 				</li>
 				<li>
-					<a href="/" className="sign__in">
+					<a className="sign__in" onClick={props.click__3}>
 						Sign In
 					</a>
 				</li>
-				<Link to="/SignUpLogin">
 					<li className="cart">
 						<IoCartOutline />
 					</li>
-				</Link>
 			</ul>
 		</div>
 	);

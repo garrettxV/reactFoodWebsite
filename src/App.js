@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import Header from './components/Header/Header';
 import SideMenu from './components/SideMenu/SideMenu';
 import Backdrop from './components/Backdrop/Backdrop';
-// import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import Menu from './components/Menu/Menu'
+import SignUpLogin from './components/SignUpLogin/SignUpLogin';
+
 
 const App = () => {
 	const [ { sideMenuOpen }, setState ] = useState({ sideMenuOpen: false });
+
+	const [ { signUpLoginOpen }, setLogin ] = useState({ signUpLoginOpen: false });
 
 	const sideMenuClickHandler = () => {
 		setState((prevState) => {
@@ -18,19 +20,39 @@ const App = () => {
 		setState({ sideMenuOpen: false });
 	};
 
+	const signUpClickHandler = () => {
+		setLogin((prevState) => {
+			return { signUpLoginOpen: !prevState.signUpLoginOpen };
+		});
+	};
+
+	const contactBackdropClickHandler = () => {
+		setLogin({ signUpLoginOpen: false });
+	};
+
 	let sideMenu;
 	let backdrop;
+	let signUpLogin
 
 	if (sideMenuOpen) {
-		sideMenu = <SideMenu/>;
+		sideMenu = <SideMenu />;
 		backdrop = <Backdrop backDropHandler={backdropClickHandler} />;
+	}
+
+	if (signUpLoginOpen) {
+		signUpLogin = <SignUpLogin contactHandler={contactBackdropClickHandler} />;
 	}
 
 	return (
 		<div style={{ height: '100%' }} className="App">
-			<Header menuClickHandler={sideMenuClickHandler} foodMenuClickHandler={backdropClickHandler} />
+			<Header
+				menuClickHandler={sideMenuClickHandler}
+				foodMenuClickHandler={backdropClickHandler}
+				signUpHandler={signUpClickHandler}
+			/>
 			{sideMenu}
 			{backdrop}
+			{signUpLogin}
 		</div>
 	);
 };
