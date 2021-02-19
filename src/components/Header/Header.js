@@ -16,7 +16,6 @@ const Header = (props) => {
 					className="header"
 					initial={{ y: -250 }}
 					animate={{ y: -5 }}
-					// transition={{ duration: 1.5, times: [ 0, 1 ] }}
 				>
 					<nav className="header__navigation">
 						<div>
@@ -47,7 +46,6 @@ const Header = (props) => {
 					</Route>
 				</Switch>
 			</div>
-			{/* <SignUpLogin/> */}
 		</Router>
 	);
 };

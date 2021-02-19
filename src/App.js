@@ -6,26 +6,31 @@ import SignUpLogin from './components/SignUpLogin/SignUpLogin';
 
 
 const App = () => {
-	const [ { sideMenuOpen }, setState ] = useState({ sideMenuOpen: false });
 
+	// Pieces of State for opening and closing the side menu and sign in form
+	const [ { sideMenuOpen }, setState ] = useState({ sideMenuOpen: false });
 	const [ { signUpLoginOpen }, setLogin ] = useState({ signUpLoginOpen: false });
 
+	// Function that returns the opposite of existing state to open the side menu
 	const sideMenuClickHandler = () => {
 		setState((prevState) => {
 			return { sideMenuOpen: !prevState.sideMenuOpen };
 		});
 	};
 
+	// Function that closes the side menu by setting the state back to false
 	const backdropClickHandler = () => {
 		setState({ sideMenuOpen: false });
 	};
 
+	// Function that returns the opposite of existing state to open the sign in form
 	const signUpClickHandler = () => {
 		setLogin((prevState) => {
 			return { signUpLoginOpen: !prevState.signUpLoginOpen };
 		});
 	};
 
+	// Function that closes the sign in form by setting the state back to false
 	const contactBackdropClickHandler = () => {
 		setLogin({ signUpLoginOpen: false });
 	};
