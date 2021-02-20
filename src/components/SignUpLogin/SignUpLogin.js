@@ -7,30 +7,29 @@ const SignUpLogin = (props) => {
 			<div className="contact__card-container">
 				<div className="contact__card">
 					<div className="contact__card-close-container">
-						<div className="contact__spacer" />
 						<button className="contact__card-close" onClick={props.contactHandler}>
 							<IoIosAdd />
 						</button>
 					</div>
-					<h2 className="contact-card_greeting"> Sign In</h2>
-					<div className="form__container">
-						<form className="contact-card_form" action="">
+					<form className="contact__card-form" action="">
+						<fieldset className="contact__fieldset">
+							<legend className="contact__greeting">Sign In</legend>
 							<input
 								type="email"
-								name="name"
-								id="Name"
+								name="email"
+								id="email"
 								placeholder="Email"
-								className="contact-card_input"
+								className="contact__card-input"
 							/>
 							<input
 								type="password"
-								name="email"
-								id="email"
+								name="password"
+								id="password"
 								placeholder="Password"
-								className="contact-card_input"
+								className="contact__card-input"
 							/>
-						</form>
-					</div>
+						</fieldset>
+					</form>
 				</div>
 			</div>
 		</div>

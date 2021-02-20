@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import './FoodMenu.css';
-import { IoCartOutline } from 'react-icons/io5';
-
+import Cart from '../Cart/Cart';
 
 const FoodMenu = (props) => {
-	const [ cart, setCart ] = useState([]);
-	const [ page, setPage ] = useState('menu');
-
 	const [ menu ] = useState([
 		{
 			id: 1,
@@ -42,41 +38,36 @@ const FoodMenu = (props) => {
 		}
 	]);
 
-	const addToCart = (item) => {
-		setCart([ ...cart, item ]);
-	};
-
 	const renderMenu = () => (
-		<>
-			<div className="grid__container">
-				<div className="grid">
-					{menu.map((item) => (
-						<div>
-							<div className="item" />
-							<div className="item__contents">
+		<div className="grid__container">
+			<div className="grid">
+				{menu.map((item) => (
+					<div>
+						<div className="item" />
+						<div className="item__contents">
+							<figure className="item__fig">
 								<img src={item.image} alt="food" className="item__img" />
-								<p className="item__item">{item.food}</p>
-								<p className="item__ingredients">{item.ingredients}</p>
-								<button onClick={() => addToCart(item)}>Add To Cart</button>
-							</div>
+								<figcaption className="item__item">{item.food}</figcaption>
+								<figcaption className="item__ingredients">{item.ingredients}</figcaption>
+							</figure>
+							<button onClick={() => props.addToCart(item)}>Add To Cart</button>
 						</div>
-					))}
-				</div>
+					</div>
+				))}
 			</div>
-			</>
-		);
+		</div>
+	);
 
-	console.log(cart);
+	console.log(props.cart);
+
 	return (
 		<div className="food__menu-container" onClick={props.click__2}>
 			<header className="food__menu-header">
-				<span>Menu</span>
-				<div className="food__menu-spacer" />
-				<button className="food__menu-cart"><IoCartOutline /><div>{cart.length}</div></button>
+				<h1>Menu</h1>
 			</header>
-			{page === 'menu' && renderMenu()}
+			{props.page === 'menu' ? renderMenu() : <Cart cart={props.cart} />}
 		</div>
 	);
-}
+};
 
 export default FoodMenu;

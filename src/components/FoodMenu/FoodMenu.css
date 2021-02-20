@@ -6,10 +6,6 @@
 	height: 100%;
 }
 
-.food__menu-spacer {
-	flex: 0.6;
-}
-
 .food__menu-cart {
 	display: flex;
 	justify-content: space-around;
@@ -49,14 +45,14 @@
 	height: 5rem;
 }
 
-.food__menu-header span {
+.food__menu-header h1 {
 	color: white;
-	font-size: 2.5rem;
-	padding-left: 21.5rem;
+	font-size: 2.2rem;
+	font-weight: 500;
 }
 
 .grid__container {
-	height: 80%;
+	height: 100%;
 	margin: 0 2rem 2rem 2rem;
 	overflow: hidden;
 	overflow: scroll;
@@ -72,22 +68,20 @@
 	grid-gap: 1rem;
 	padding: 1rem 3rem 3rem 3rem;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	/* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-	/* grid-template-rows: minmax(100px, 1fr); */
 }
 
-/* .item {
-} */
+.grid li {
+	font-size: 2rem;
+	color: black;
+}
 
 .item__contents {
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center; */
 	align-items: center;
 	height: 20rem;
 	width: 16.8rem;
 	background: #fff;
-	/* border: #ccc 1px solid; */
 	border-radius: 6px;
 }
 
@@ -97,9 +91,12 @@
 	object-fit: contain;
 }
 
-/* .item__item {
-	padding-top: 1rem;
-} */
+.item__fig {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
 .item__ingredients {
 	font-size: 0.8rem;
