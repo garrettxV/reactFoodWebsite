@@ -70,11 +70,6 @@
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.grid li {
-	font-size: 2rem;
-	color: black;
-}
-
 .item__contents {
 	display: flex;
 	flex-direction: column;

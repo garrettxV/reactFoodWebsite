@@ -1,5 +1,7 @@
 import '../FoodMenu/FoodMenu.css';
 const Cart = (props) => {
+	const emptyCart = 'Your cart is empty.';
+
 	const renderCart = () => (
 		<div className="grid__container">
 			<div className="grid">
@@ -19,6 +21,13 @@ const Cart = (props) => {
 		</div>
 	);
 
-	return <div>{renderCart()}</div>;
+	return (
+		<div className="food__menu-container" onClick={props.click__2}>
+			<header className="food__menu-header">
+				<h1>Cart</h1>
+			</header>
+			{props.cartLength < 1 ? <p style={{ fontSize: '2rem', color: 'black' }}>{emptyCart}</p> : renderCart()}
+		</div>
+	);
 };
 export default Cart;

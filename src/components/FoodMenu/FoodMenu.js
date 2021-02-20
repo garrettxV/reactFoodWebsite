@@ -65,7 +65,8 @@ const FoodMenu = (props) => {
 			<header className="food__menu-header">
 				<h1>Menu</h1>
 			</header>
-			{props.page === 'menu' ? renderMenu() : <Cart cart={props.cart} />}
+			{renderMenu()}
+			{/* {props.page === 'menu' ? renderMenu() : <Cart cart={props.cart} />} */}
 		</div>
 	);
 };

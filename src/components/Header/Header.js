@@ -5,28 +5,11 @@ import Navbar from '../Navbar/Navbar';
 import FoodMenu from '../FoodMenu/FoodMenu';
 import Locations from '../Locations/Locations';
 import Hero from '../Hero/Hero';
-import { useState } from 'react';
+import Cart from '../Cart/Cart';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Header = (props) => {
-	const [ cart, setCart ] = useState([]);
-	const [ { page }, setPage ] = useState({ page: 'menu' });
-
-	const pageChange = () => {
-		setPage('cart');
-	};
-
-	const pageIsMenu = () => {
-		setPage({ page: 'menu' });
-	};
-
-	const addToCart = (item) => {
-		setCart([ ...cart, item ]);
-	};
-
-	const cartLength = cart.length;
-
 	return (
 		<Router>
 			<div className="container">
@@ -47,9 +30,9 @@ const Header = (props) => {
 						<div className="spacer" />
 						<Navbar
 							click__3={props.signUpHandler}
-							cartLength={cartLength}
-							pageChange={pageChange}
-							pageIsMenu={pageIsMenu}
+							cartLength={props.cartLength}
+							pageChange={props.pageChange}
+							pageIsMenu={props.pageIsMenu}
 						/>
 					</nav>
 				</motion.header>
@@ -61,10 +44,13 @@ const Header = (props) => {
 						<FoodMenu
 							menu={props.menu}
 							click__2={props.foodMenuClickHandler}
-							addToCart={addToCart}
-							page={page}
-							cart={cart}
+							addToCart={props.addToCart}
+							page={props.page}
+							cart={props.cart}
 						/>
+					</Route>
+					<Route exact path="/cart">
+						<Cart cart={props.cart} cartLength={props.cartLength} />
 					</Route>
 					<Route exact path="/locations">
 						<Locations />

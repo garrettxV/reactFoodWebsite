@@ -8,8 +8,10 @@ import SignUpLogin from './components/SignUpLogin/SignUpLogin';
 const App = () => {
 
 	// Pieces of State for opening and closing the side menu and sign in form
-	const [ { sideMenuOpen }, setState ] = useState({ sideMenuOpen: false });
-	const [ { signUpLoginOpen }, setLogin ] = useState({ signUpLoginOpen: false });
+	const [ sideMenuOpen, setState ] = useState(false);
+	const [ signUpLoginOpen, setLogin ] = useState(false);
+	const [ cart, setCart ] = useState([]);
+	const [ { page }, setPage ] = useState({ page: 'menu' });
 
 	// Function that returns the opposite of existing state to open the side menu
 	const sideMenuClickHandler = () => {
@@ -20,7 +22,8 @@ const App = () => {
 
 	// Function that closes the side menu by setting the state back to false
 	const backdropClickHandler = () => {
-		setState({ sideMenuOpen: false });
+		setState(false);
+		setLogin(false);
 	};
 
 	// Function that returns the opposite of existing state to open the sign in form
@@ -30,10 +33,19 @@ const App = () => {
 		});
 	};
 
-	// Function that closes the sign in form by setting the state back to false
-	const contactBackdropClickHandler = () => {
-		setLogin({ signUpLoginOpen: false });
+	const pageChange = () => {
+		setPage('cart');
 	};
+
+	const pageIsMenu = () => {
+		setPage({ page: 'menu' });
+	};
+
+	const addToCart = (item) => {
+		setCart([ ...cart, item ]);
+	};
+
+	const cartLength = cart.length;
 
 	let sideMenu;
 	let backdrop;
@@ -45,7 +57,7 @@ const App = () => {
 	}
 
 	if (signUpLoginOpen) {
-		signUpLogin = <SignUpLogin contactHandler={contactBackdropClickHandler} />;
+		signUpLogin = <SignUpLogin contactHandler={backdropClickHandler} />;
 	}
 
 	return (
@@ -54,6 +66,12 @@ const App = () => {
 				menuClickHandler={sideMenuClickHandler}
 				foodMenuClickHandler={backdropClickHandler}
 				signUpHandler={signUpClickHandler}
+				page={page}
+				cart={cart}
+				addToCart={addToCart}
+				pageIsMenu={pageIsMenu}
+				cartLength={cartLength}
+				pageChange={pageChange}
 			/>
 			{sideMenu}
 			{backdrop}

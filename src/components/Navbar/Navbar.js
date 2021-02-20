@@ -21,10 +21,12 @@ const Navbar = (props) => {
 						Sign In
 					</a>
 				</li>
+				<Link to="/cart">
 				<li className="cart" onClick={props.pageChange}>
 					<IoCartOutline />
 					<span className="cart__count">{props.cartLength}</span>
 				</li>
+				</Link>
 			</ul>
 		</div>
 	);
